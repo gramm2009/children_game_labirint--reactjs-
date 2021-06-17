@@ -8,8 +8,8 @@ function App () {
       <div className="App-container">
         <Link to='/menupage' className="App-link">
           <div className="App-title">
-            Игра ЛАБИРИНТ
-        </div>
+            <span>Игра ЛАБИРИНТ</span>
+          </div>
         </Link>
       </div>
     </div>
