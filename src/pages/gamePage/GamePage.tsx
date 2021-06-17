@@ -44,9 +44,9 @@ export const GamePage: React.FC = () => {
                 <span>Score: { score }</span>
                 <div>
                     <span>Изменить уровень сложности: </span>
-                    <button onClick={ () => change.levelDown() }>-</button>
+                    <button disabled={ buttonStatus ? true : false } onClick={ () => change.levelDown() }>-</button>
                     <span> { levelGame } </span>
-                    <button onClick={ () => change.levelUp() }>+</button>
+                    <button disabled={ buttonStatus ? true : false } onClick={ () => change.levelUp() }>+</button>
                 </div>
 
                 {/* <div>
