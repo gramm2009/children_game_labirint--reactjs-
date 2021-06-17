@@ -21,9 +21,4 @@ export const cleaner = () => {
     }
     arraySteps.map(el=>el.textContent='')
 
-    console.log( start );
-    console.log( finish );
-    console.log( steps );
-    console.log( error );
-    console.log( arraySteps );
 }

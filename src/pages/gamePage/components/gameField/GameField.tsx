@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { gameStatusAction, Score , buttonStatusAction} from "../../../../redux/gamePage/gamePageActions";
+import { gameStatusAction, Score, buttonStatusAction } from "../../../../redux/gamePage/gamePageActions";
 import { RootState } from "../../../../redux/rootReducer";
 import "./styles.scss";
 import { result } from "./utils/result";
@@ -28,8 +28,8 @@ export const GameField: React.FC = () => {
             if ( status ) {
                 dispatch( Score( score ) )
                 dispatch( gameStatusAction( false ) )
-                dispatch(buttonStatusAction( false ) )
-            } 
+                dispatch( buttonStatusAction( false ) )
+            }
         }
     }
 

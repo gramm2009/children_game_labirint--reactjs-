@@ -97,7 +97,6 @@ export const Move = ( id: number ): MoveType => {
 
     finish = document.getElementById( `${ coordinatesStep }` );
     finish!.classList.add( "finish" );
-    // finish!.textContent = "finish";
 
     return { newTenMoves };
 };

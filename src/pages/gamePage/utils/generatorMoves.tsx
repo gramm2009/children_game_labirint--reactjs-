@@ -4,7 +4,7 @@ type GeneratorMovesType = {
 
 export const GeneratorMoves = (): GeneratorMovesType => {
 
-    let tenMoves: Array<number> = []// массив с 10 ходами
+    let tenMoves: Array<number> = []
 
     for ( let i = 0; i < 10; i++ ) {
         let mov: number = ( ( Math.random() * 4 ) );

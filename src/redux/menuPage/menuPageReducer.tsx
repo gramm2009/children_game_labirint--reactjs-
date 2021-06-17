@@ -9,13 +9,13 @@ import {
 export type DefaultStateType = {
     levelGame: number
     speedGame: number
-    showMenuPage:boolean
+    showMenuPage: boolean
 }
 
 const defaultState: DefaultStateType = {
     levelGame: 3,
     speedGame: 1,
-    showMenuPage:true
+    showMenuPage: true
 };
 
 export const menuPageReducer = ( state = defaultState, action: MenuPageActionsType ) => {

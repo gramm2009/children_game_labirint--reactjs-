@@ -19,21 +19,15 @@ export const result = ( event: React.MouseEvent<HTMLTableElement> ): ResultType 
         status = true;
     } else {
         if ( ( event.target as HTMLElement ).classList.contains( 'GameField-gameCell' ) ) {
-            // прописать здесь обработчик ошибок
 
             error = document.getElementById( `${ ( event.target as HTMLElement ).id }` )!
             error.classList.add('error')
             error.textContent = 'Error'
             finish.innerHTML = 'Finish'
-            console.log( error );
             score = -1;
             status = true;
             
         }
     }
-
-
-    // ВЕРНУТЬ РЕЗУЛЬТАТ правильно или нет + статус игры
-
     return { score, status }
 }

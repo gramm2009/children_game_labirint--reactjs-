@@ -9,33 +9,33 @@ import { StartGame } from "./utils/startGame";
 import { buttonStatusAction, gameStatusAction } from "../../redux/gamePage/gamePageActions"
 import { levelGameUpAction } from "../../redux/menuPage/menuPageActions"
 import { cleaner } from "./utils/cleaner";
-import useChange  from "../../hooks/useChange";
+import useChange from "../../hooks/useChange";
 
 export const GamePage: React.FC = () => {
     console.log( 'render GamePage' );
     const change = useChange()
     const dispatch = useDispatch()
-    
+
     const levelGame = useSelector( ( state: RootState ) => state.menuPageReducer.levelGame )
     const speedGame = useSelector( ( state: RootState ) => state.menuPageReducer.speedGame )
 
-    
+
     const score = useSelector( ( state: RootState ) => state.gamePageReducer.score )
-    const buttonStatus = useSelector((state:RootState)=>state.gamePageReducer.buttonStatus)
-    
-    
-    
+    const buttonStatus = useSelector( ( state: RootState ) => state.gamePageReducer.buttonStatus )
+
+
+
 
     const start = () => {
-        dispatch(buttonStatusAction(true))
+        dispatch( buttonStatusAction( true ) )
         cleaner()
         const { id } = StartGame();
         const { newTenMoves } = Move( id );
-        const {timeEffect} = ArrowEffect( newTenMoves )
-        setTimeout(()=>{
+        const { timeEffect } = ArrowEffect( newTenMoves )
+        setTimeout( () => {
             dispatch( gameStatusAction( true ) )
-        },timeEffect)
-        
+        }, timeEffect )
+
     };
 
     return (
@@ -45,16 +45,16 @@ export const GamePage: React.FC = () => {
                 <span>Score: { score }</span>
                 <div>
                     <span>Изменить уровень сложности: </span>
-                    <button onClick={()=>change.levelDown()  }>-</button>
+                    <button onClick={ () => change.levelDown() }>-</button>
                     <span> { levelGame } </span>
-                    <button onClick={()=>change.levelUp() }>+</button>
+                    <button onClick={ () => change.levelUp() }>+</button>
                 </div>
 
                 <div>
                     <span>Изменить скорость игры: </span>
-                    <button onClick={()=>change.speedDown() }>-</button>
+                    <button onClick={ () => change.speedDown() }>-</button>
                     <span> { speedGame } </span>
-                    <button onClick={()=>change.speedUp() }>+</button>
+                    <button onClick={ () => change.speedUp() }>+</button>
                 </div>
                 <GameField />
                 <StepsField />
