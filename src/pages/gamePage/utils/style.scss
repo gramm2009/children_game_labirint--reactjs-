@@ -1,0 +1,28 @@
+.span{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 40px;
+
+}
+
+.span-right{
+    width: 40px;
+    height: 43px;
+}
+
+.span-bottom{
+    transform: rotate(90deg);
+    width: 45px;
+    height: 40px;
+}
+
+.span-left{
+    transform: rotate(180deg);
+}
+
+.span-top{
+    transform: rotate(270deg);
+    width: 35px;
+    height: 45px;
+}

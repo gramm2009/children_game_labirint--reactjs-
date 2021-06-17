@@ -1,0 +1,37 @@
+.GameField {
+
+    border: 1px solid blue;
+
+    &-row {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-cell {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(79, 118, 226, 0.719);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+    }
+
+    &-zeroCell {
+        border: none;
+        width: 30px;
+        border: 1px solid white;
+    }
+
+    &-topCell {
+        height: 30px;
+    }
+
+    &-leftCell {
+        width: 30px;
+    }
+    
+    &-gameCell{
+        cursor: pointer;
+    }
+}
