@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { RootState } from "../../redux/rootReducer"
 
 import { Link } from 'react-router-dom';
@@ -8,11 +8,10 @@ import useChange from "../../hooks/useChange";
 
 export const MenuPage: React.FC = () => {
 
-    const dispatch = useDispatch()
     const change = useChange()
 
     const levelGame = useSelector( ( state: RootState ) => state.menuPageReducer.levelGame )
-    const speedGame = useSelector( ( state: RootState ) => state.menuPageReducer.speedGame )
+    // const speedGame = useSelector( ( state: RootState ) => state.menuPageReducer.speedGame )
 
     return (
         <div className="MenuPage">
@@ -23,9 +22,9 @@ export const MenuPage: React.FC = () => {
                 <div>Как играть:   Следите за подсказками ( стрелки )</div>
 
                 <div>
-                    <span>Всего уровней сложности в игре:  От 3 - 9</span>
+                    <span>Всего уровней сложности в игре:  От 3 - 6</span>
                     <br />
-                    <span>Возможная скорость в игре: От 1 - 10</span>
+                    {/* <span>Возможная скорость в игре: От 1 - 10</span> */ }
                 </div>
 
                 <div>
@@ -35,12 +34,12 @@ export const MenuPage: React.FC = () => {
                     <button onClick={ () => change.levelUp() }>+</button>
                 </div>
 
-                <div>
+                {/* <div>
                     <span>Выбрать начальную скорость игры: </span>
                     <button onClick={ () => change.speedDown() }>-</button>
                     <span> { speedGame } </span>
                     <button onClick={ () => change.speedUp() }>+</button>
-                </div>
+                </div> */}
 
                 <div>
                     <Link to="/gamepage"> <button>Перейти к игре</button></Link>

@@ -7,17 +7,16 @@ import { ArrowEffect } from "./utils/arrowEffect";
 import { Move } from "./utils/move";
 import { StartGame } from "./utils/startGame";
 import { buttonStatusAction, gameStatusAction } from "../../redux/gamePage/gamePageActions"
-import { levelGameUpAction } from "../../redux/menuPage/menuPageActions"
 import { cleaner } from "./utils/cleaner";
 import useChange from "../../hooks/useChange";
 
 export const GamePage: React.FC = () => {
-    console.log( 'render GamePage' );
+
     const change = useChange()
     const dispatch = useDispatch()
 
     const levelGame = useSelector( ( state: RootState ) => state.menuPageReducer.levelGame )
-    const speedGame = useSelector( ( state: RootState ) => state.menuPageReducer.speedGame )
+    // const speedGame = useSelector( ( state: RootState ) => state.menuPageReducer.speedGame )
 
 
     const score = useSelector( ( state: RootState ) => state.gamePageReducer.score )
@@ -50,12 +49,12 @@ export const GamePage: React.FC = () => {
                     <button onClick={ () => change.levelUp() }>+</button>
                 </div>
 
-                <div>
+                {/* <div>
                     <span>Изменить скорость игры: </span>
                     <button onClick={ () => change.speedDown() }>-</button>
                     <span> { speedGame } </span>
                     <button onClick={ () => change.speedUp() }>+</button>
-                </div>
+                </div> */}
                 <GameField />
                 <StepsField />
                 <button
