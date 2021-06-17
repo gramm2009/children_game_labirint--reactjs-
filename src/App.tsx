@@ -8,7 +8,7 @@ function App () {
       <div className="App-container">
         <Link to='/menupage' className="App-link">
           <div className="App-title">
-            <span>Игра ЛАБИРИНТ</span>
+            <span>Children Game LABIRINT</span>
           </div>
         </Link>
       </div>
