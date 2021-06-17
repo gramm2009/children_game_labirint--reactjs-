@@ -1,0 +1,21 @@
+.App {
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-title {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(180, 140, 140);
+    color: white;
+  }
+
+  &-link {
+    text-decoration: none;
+    margin: 0 auto;
+  }
+}

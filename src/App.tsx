@@ -1,16 +1,17 @@
 
-import './App.css';
+import './App.scss';
 import { Link } from 'react-router-dom';
 
 function App () {
   return (
     <div className="App">
-      App
-      <Link to='/menupage' className="App-link">
-        <div className="App-title">
-          Игра ЛАБИРИНТ
+      <div className="App-container">
+        <Link to='/menupage' className="App-link">
+          <div className="App-title">
+            Игра ЛАБИРИНТ
         </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }
